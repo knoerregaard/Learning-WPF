@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WPF_Styling.Views.Partials.Toolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="900">
+
+    <StackPanel x:Name="toolbarcontainer" Background="#3E64FF">
+        <StackPanel.Effect>
+            <DropShadowEffect Opacity="0.1" ShadowDepth="8" Direction="270"/>
+        </StackPanel.Effect>
+        <!-- Grid for Toolbar start -->
+        <Grid MaxWidth="900">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <!-- Stackpanel for logo & title -->
+            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="20,0,0,0">
+                <Image RenderOptions.BitmapScalingMode="HighQuality" Height="45" Source="../../images/2970624.png" />
+                <TextBlock FontSize="24" Text="Gamify" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" FontFamily="Franklin Gothic Demi" RenderOptions.BitmapScalingMode="HighQuality"></TextBlock>
+            </StackPanel>
+            <!-- Stackpanel for Menu -->
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock FontSize="18" Text="Hjem | Om os | Login" Foreground="White" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="HighQuality" VerticalAlignment="Center"/>
+            </StackPanel>
+
+        </Grid>
+    </StackPanel>
+</UserControl>
