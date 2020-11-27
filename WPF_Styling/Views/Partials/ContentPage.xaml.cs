@@ -16,17 +16,12 @@ using System.Windows.Shapes;
 namespace WPF_Styling.Views.Partials
 {
     /// <summary>
-    /// Interaction logic for Toolbar.xaml
+    /// Interaction logic for ContentPage.xaml
     /// </summary>
-    public partial class Toolbar : UserControl
+    public partial class ContentPage : UserControl
     {
-
-        public MainWindow mw = (MainWindow)Application.Current.MainWindow;
-        public Toolbar()
+        public ContentPage()
         {
-            mw.mintekst.Text = "ASd";
-
-            //toolbarcontainer.Background = new SolidColorBrush(Color.FromArgb(0xFF, 0x24, 0x63, 0xAE));
             InitializeComponent();
         }
     }
