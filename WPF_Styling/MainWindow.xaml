@@ -10,9 +10,55 @@
 
     <StackPanel>
         <uc:Toolbar/>
-        <uc:ContentPage/>
-        <TextBlock Name="mintekst"></TextBlock>
+        <!--<StackPanel.Effect>
+            <DropShadowEffect Opacity="0.1" ShadowDepth="8" Direction="270"/>
+        </StackPanel.Effect>
+        <StackPanel Background="#3E64FF">
+            --><!-- Grid for Toolbar start --><!--
+            <Grid MaxWidth="900">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                --><!-- Stackpanel for logo & title --><!--
+                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="20,0,0,0">
+                    <Image RenderOptions.BitmapScalingMode="HighQuality" Height="45" Source="/images/2970624.png" />
+                    <TextBlock FontSize="24" Text="Gamify" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" FontFamily="Franklin Gothic Demi" RenderOptions.BitmapScalingMode="HighQuality"></TextBlock>
+                </StackPanel>
+                --><!-- Stackpanel for Menu --><!--
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBlock FontSize="18" Text="Hjem | Om os | Login" Foreground="White" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="HighQuality" VerticalAlignment="Center"/>
+                </StackPanel>
 
+            </Grid>
+        </StackPanel>-->
+        
+        
+        <Grid MaxWidth="900" Width="800">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" /> 
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="10" Grid.Row="0" Grid.Column="0" Background="#1A223F" Margin="10">
+                <StackPanel HorizontalAlignment="Center" Width="Auto"  Orientation="Horizontal" Margin="20,0,0,0" >
+                    <TextBlock HorizontalAlignment="Center">asd</TextBlock>
+                </StackPanel>
+            </Border>
+            
+            <StackPanel Grid.Row="0" Grid.Column="1" Width="Auto"  Orientation="Horizontal" Margin="10" >
+                <TextBlock >
+                    <TextBlock Text="{Binding Path=FirstName}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+        
     </StackPanel>
 
 </Window>

@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Styling.ViewModels;
+using System.Threading.Tasks;
+
 
 namespace WPF_Styling
 {
@@ -20,9 +23,25 @@ namespace WPF_Styling
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainWindowViewModel viewModel = new MainWindowViewModel();
+
         public MainWindow()
         {
+            
+
+            viewModel.FirstName = "Kevin";
+
+            DataContext = viewModel;
+            
+
+
             InitializeComponent();
+            
+
+            //viewModel.FirstName = "Mark"; //The property wont change before we raise an event.
+
+            //viewModel.OnPropertyChanged(nameof(MainWindowViewModel.FirstName)); //We raise an event with OnPropertyChanged. It takes the name of the calling member.
         }
+
     }
 }

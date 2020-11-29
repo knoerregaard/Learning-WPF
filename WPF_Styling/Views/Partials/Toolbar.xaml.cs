@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Styling.ViewModels;
 
 namespace WPF_Styling.Views.Partials
 {
@@ -20,11 +21,8 @@ namespace WPF_Styling.Views.Partials
     /// </summary>
     public partial class Toolbar : UserControl
     {
-
-        public MainWindow mw = (MainWindow)Application.Current.MainWindow;
         public Toolbar()
         {
-            mw.mintekst.Text = "ASd";
 
             //toolbarcontainer.Background = new SolidColorBrush(Color.FromArgb(0xFF, 0x24, 0x63, 0xAE));
             InitializeComponent();
