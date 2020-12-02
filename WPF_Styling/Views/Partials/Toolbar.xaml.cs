@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,11 +22,39 @@ namespace WPF_Styling.Views.Partials
     /// </summary>
     public partial class Toolbar : UserControl
     {
+
         public Toolbar()
         {
-
-            //toolbarcontainer.Background = new SolidColorBrush(Color.FromArgb(0xFF, 0x24, 0x63, 0xAE));
             InitializeComponent();
+            CommandBindings.Add(new CommandBinding(MainWindowViewModel.NavigateHelp));
+
         }
+        public void OpenCmdExecuted(object target, ExecutedRoutedEventArgs e)
+        {
+            String command, targetobj;
+            command = ((RoutedCommand)e.Command).Name;
+            targetobj = ((FrameworkElement)target).Name;
+            MessageBox.Show("The " + command + " command has been invoked on target object " + targetobj);
+        }
+        public void clikme(object target, RoutedEventArgs e)
+        {
+            
+            FrameworkElement feSource = e.Source as FrameworkElement;
+            switch (feSource.Name)
+            {
+                case "but":
+                    Debug.WriteLine("asd");
+                    break;
+                case "NoButton":
+                    // do something ...
+                    break;
+                case "CancelButton":
+                    // do something ...
+                    break;
+            }
+            e.Handled = true;
+        }
+        
+
     }
 }

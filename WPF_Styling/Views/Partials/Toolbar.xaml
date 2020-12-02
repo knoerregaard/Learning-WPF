@@ -6,13 +6,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="80" d:DesignWidth="900">
 
-    <StackPanel Background="#3E64FF">
     <!--xmlns:mvc="clr-namespace:WPF_Styling.ViewModels"-->
     <!--<UserControl.Resources>
         <mvc:MainWindowViewModel x:Key="mainviewmodel"/>
     </UserControl.Resources>-->
-    
-    <StackPanel x:Name="toolbarcontainer" Background="#3E64FF">
+
+    <StackPanel Background="#3E64FF">
         <StackPanel.Effect>
             <DropShadowEffect Opacity="0.1" ShadowDepth="8" Direction="270"/>
         </StackPanel.Effect>
@@ -31,10 +30,13 @@
                 <TextBlock FontSize="24" Text="Gamify" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" FontFamily="Franklin Gothic Demi" RenderOptions.BitmapScalingMode="HighQuality"></TextBlock>
             </StackPanel>
             <!-- Stackpanel for Menu -->
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Button.Click="clikme">
+
+                <Button Name="but"  Content="Skift" Command="{Binding Button_Click}"></Button>
+
+                
                 <TextBlock FontSize="18" Text="Hjem | Om os | Login" Foreground="White" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="HighQuality" VerticalAlignment="Center"/>
             </StackPanel>
-
         </Grid>
     </StackPanel>
 </UserControl>

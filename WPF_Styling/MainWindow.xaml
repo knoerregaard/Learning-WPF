@@ -35,9 +35,11 @@
 
             </Grid>
         </StackPanel>-->
-        
-        
-        <Grid MaxWidth="900" Width="800">
+
+        <!--<Frame Source="pack://application:,,,/Views/About.xaml"/>-->
+        <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden"/>
+
+        <!--<Grid MaxWidth="900" Width="800">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="2*" />
@@ -57,7 +59,7 @@
                     <TextBlock Text="{Binding Path=FirstName}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </TextBlock>
             </StackPanel>
-        </Grid>
+        </Grid>-->
         
     </StackPanel>
 

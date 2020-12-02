@@ -14,14 +14,25 @@ namespace WPF_Styling.ViewModels
 
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        public static RoutedCommand NavigateHelp = new RoutedCommand();
+        
+        
+
+        private string messageTest;
+
         public string MessageText {
             get { return "Hello"; }
+            set { messageTest = value; }
         }
 
+        public NavCommand NaviCommand { get; set; }
         public MessageCommand DisplayMessageCommand { get; set; }
 
         public MainWindowViewModel()
         {
+            
+            
+            NaviCommand = new NavCommand(dosomething);
             //The DisplayMessage will be passed as an action
             DisplayMessageCommand = new MessageCommand(DisplayMessage);
             
@@ -31,7 +42,11 @@ namespace WPF_Styling.ViewModels
             HiButtonCommand = new RelayCommand(ShowMessage, param => this.canExecute);
             toggleExecuteCommand = new RelayCommand(ChangeCanExecute);
         }
+        public void dosomething()
+        {
+            Debug.WriteLine("asdasdasdasd");
 
+        }
 
         public void DisplayMessage()
         {

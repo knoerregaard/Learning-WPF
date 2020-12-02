@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPF_Button.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Button"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+        
+    <!-- Definition af ressource, der gøres tilgængeligt -->
+    <Window.Resources>
+        <local:ShowTextCommand x:Key="showTextCommand" />
+    </Window.Resources>
+    
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="Klikknap" Grid.Row="0" Click="Button_Click"></Button>
+        <TextBox x:Name="Input" Grid.Row="1" Text="Eksempel tekst"></TextBox>
+        
+        <!-- Use of Command -->
+        <Button Grid.Row="2" Content="Klikknap 2"  CommandParameter="{Binding ElementName=Input, Path=Text}" Command="{Binding Mode=OneWay, Source={StaticResource showTextCommand}}"  >
+            <!--<Button.Command>
+                <local:ShowTextCommand/>
+            </Button.Command>-->
+        </Button>
+        
+    </Grid>
+</Window>
