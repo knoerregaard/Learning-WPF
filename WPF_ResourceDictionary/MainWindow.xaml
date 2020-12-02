@@ -22,7 +22,9 @@
     <StackPanel>
         <!-- Resources can be created and reused -->
         <TextBlock Style="{StaticResource Header1}">tekst</TextBlock>
-        <Button Style="{StaticResource Button}" Width="100" Height="50">Knap</Button>
+        <Button Style="{StaticResource Button}" Width="100" Height="50" Content="Knap" BorderThickness="2">
+            
+        </Button>
         <Button Style="{StaticResource Button}" Background="{StaticResource SystemCol}" Width="100" Height="50">Knap</Button>
     </StackPanel>
 </Window>
