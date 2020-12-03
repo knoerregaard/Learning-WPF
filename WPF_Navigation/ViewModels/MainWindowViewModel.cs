@@ -26,10 +26,6 @@ namespace WPF_Navigation.ViewModels
             {
                 return pageNavigationCommand;
             }
-            //set
-            //{
-            //    pageNavigationCommand = value;
-            //}
         }
 
         public MainWindowViewModel()

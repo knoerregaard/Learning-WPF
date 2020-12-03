@@ -1,15 +1,15 @@
-﻿<Window x:Class="WPF_Navigation.MainWindow"
+﻿<Window x:Class="WPF_NavigationCommand.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF_Navigation"
+        xmlns:local="clr-namespace:WPF_NavigationCommand"
         mc:Ignorable="d"
-        xmlns:uc="clr-namespace:WPF_Navigation.Views.Partials"
+        xmlns:uc="clr-namespace:WPF_NavigationCommand.Views.UserControls"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <uc:Topbar></uc:Topbar>
-        <TextBlock x:Name="textblok" Text="{Binding SampleText}" ></TextBlock>
-        <Frame x:Name="PageFrame" Content="{Binding PageContent}" NavigationUIVisibility="Hidden"></Frame>
+        <uc:Topbar/>
+        <TextBlock Text="{Binding Title}"></TextBlock>
+        <Frame Content="{Binding PageContent}" Name="PageContentFrame"></Frame>
     </StackPanel>
 </Window>

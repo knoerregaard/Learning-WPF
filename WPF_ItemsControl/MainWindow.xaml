@@ -23,6 +23,7 @@
                     </StackPanel>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
+            
         </ItemsControl>
     </Grid>
 </Window>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Styling", "WPF_Styling\WPF_Styling.csproj", "{A73541C9-8A50-4710-A094-1331454176F2}"
 EndProject
@@ -24,6 +24,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_DataGrid", "WPF_DataGrid\WPF_DataGrid.csproj", "{E5D00FC2-EA27-4CE1-8C9F-6D068779842B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_ResourceDictionary", "WPF_ResourceDictionary\WPF_ResourceDictionary.csproj", "{F67F5B9A-ABDD-4AB0-A45B-50798496B561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_NavigationCommand", "WPF_NavigationCommand\WPF_NavigationCommand.csproj", "{64FD6C8A-9C47-4916-8B14-6D86BDECED1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_SimpleNavigation", "WPF_SimpleNavigation\WPF_SimpleNavigation.csproj", "{69772417-C47E-40E7-9AA8-1059B7FF656D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{F67F5B9A-ABDD-4AB0-A45B-50798496B561}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F67F5B9A-ABDD-4AB0-A45B-50798496B561}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F67F5B9A-ABDD-4AB0-A45B-50798496B561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FD6C8A-9C47-4916-8B14-6D86BDECED1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FD6C8A-9C47-4916-8B14-6D86BDECED1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FD6C8A-9C47-4916-8B14-6D86BDECED1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FD6C8A-9C47-4916-8B14-6D86BDECED1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69772417-C47E-40E7-9AA8-1059B7FF656D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69772417-C47E-40E7-9AA8-1059B7FF656D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69772417-C47E-40E7-9AA8-1059B7FF656D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69772417-C47E-40E7-9AA8-1059B7FF656D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
