@@ -6,22 +6,28 @@
         xmlns:local="clr-namespace:WPF_ResourceDictionary"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <!-- Resources property -->
     <Window.Resources>
+        <!-- Contains a collection of resources -->
         <ResourceDictionary>
+            <!-- Reusable resource -->
             <SolidColorBrush x:Key="SystemCol" Color="Aqua"></SolidColorBrush>
-            <!-- A Collection of resources-->
+
             <Style TargetType="TextBlock" x:Key="Header1">
-                <Setter Property="Foreground" Value="red" />
+                <Setter Property="Foreground" Value="{StaticResource SystemCol}" />
                 <Setter Property="FontSize" Value="28" />
             </Style>
             <Style TargetType="Button" x:Key="Button">
                 <Setter Property="Background" Value="Firebrick"></Setter>
             </Style>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="theme1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
     <StackPanel>
         <!-- Resources can be created and reused -->
-        <TextBlock Style="{StaticResource Header1}">tekst</TextBlock>
+        <TextBlock Style="{StaticResource Header1}">Application X</TextBlock>
         <Button Style="{StaticResource Button}" Width="100" Height="50" Content="Knap" BorderThickness="2">
             
         </Button>

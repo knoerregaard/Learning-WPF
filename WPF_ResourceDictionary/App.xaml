@@ -2,8 +2,29 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WPF_ResourceDictionary"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow2.xaml">
     <Application.Resources>
-         
+        <!--#region (1) TextBlock Forground and FontSize set START -->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="OldLace"></Setter>
+            <Setter Property="FontSize" Value="28"></Setter>
+        </Style>
+        <!--#endregion TextBlock Forground and FontSize set END -->
+        
+        <!--Nice Gradient button start -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush  StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#FFD9EDFF" Offset="0"/>
+                        <GradientStop Color="#FFC0DEFF" Offset="0.3"/>
+                        <GradientStop Color="#FFAFD1F8" Offset="0.53"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+       
+        <!--Nice Gradient button END -->
+        
     </Application.Resources>
 </Application>
